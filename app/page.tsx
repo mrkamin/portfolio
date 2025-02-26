@@ -4,7 +4,7 @@ export default async function Home() {
   const projects = await getProjects();
 
   return (
-    <div>
+    <div className="text-3xl font-bold underline">
       <p>The projects go here:</p>
       {projects.map((project) => (
         <div key={project._id}>{project.name}</div> // ✅ Fix: Properly returning JSX
