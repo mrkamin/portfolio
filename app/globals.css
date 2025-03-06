@@ -41,3 +41,55 @@ button {
   padding: 5px;
   font-weight: 600;
 }
+
+nav {
+  width: max-content;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  backdrop-filter: blur(15px);
+}
+
+nav a {
+  display: flex;
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  color: var(--color-bg);
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+nav a.active {
+  background: var(--color-bg-variant);
+}
+
+.hero-social a {
+  display: flex;
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  color: var(--color-bg);
+  font-size: 1.1rem;
+}
+
+.hero-social a:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+.scroll-down {
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  color: var(--color-bg);
+  background: var(--color-primary-variant);
+
+}

@@ -9,23 +9,23 @@ const Navbar = () => {
     const [activeNav, setActiveNav] = useState('/')
   return (
     <div>
-      <nav className="flex gap-5 m-10 b">
-                <Link href="/" className={activeNav === '/' ? 'active' : ''}>
-                    <AiOutlineHome />
-                </Link>
-                <a href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''} >
-                    <AiOutlineUser />
-                </a>
-                <a href="#experince" onClick={() => setActiveNav('#experince')} className={activeNav === '#experince' ? 'active' : ''} >
-                    <BiBookAlt />
-                </a>
-                <a href="#services" onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''} >
-                    <RiServiceLine />
-                </a>
-                <a href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''} >
-                    <BiMessageRoundedDetail />
-                </a>
-            </nav>
+      <nav className="flex gap-5 bg-[rgba(77,181,255,0.4)] p-2 border-none rounded-[3rem]">
+            <Link href="/" className={activeNav === '/' ? 'active' : ''}>
+                <AiOutlineHome />
+            </Link>
+            <Link href="#about" onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''} >
+                <AiOutlineUser />
+            </Link>
+            <Link href="#experince" onClick={() => setActiveNav('#experince')} className={activeNav === '#experince' ? 'active' : ''} >
+                <BiBookAlt />
+            </Link>
+            <Link href="#services" onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''} >
+                <RiServiceLine />
+            </Link>
+            <Link href="#contact" onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''} >
+                <BiMessageRoundedDetail />
+            </Link>
+        </nav>
     </div>
   )
 }
