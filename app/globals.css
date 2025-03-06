@@ -31,15 +31,19 @@ body {
 }
 
 button {
-  background-color: var(--color-bg-variant);
   color: var(--color-bg);
   width: 8rem;
-  border: none;
+  border: 1px solid var(--color-bg-variant);
   border-radius: 0.3rem;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 5px;
   font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-bg-variant);
 }
 
 nav {
@@ -63,6 +67,7 @@ nav a {
 
 nav a:hover {
   background: rgba(0,0,0,0.3);
+  color: var(--color-white);
 }
 
 nav a.active {
@@ -80,11 +85,21 @@ nav a.active {
 
 .hero-social a:hover {
   background: rgba(0,0,0,0.3);
+  color: var(--color-white);
+}
+
+.hero-social::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background: var(--color-bg);
+  display: block;
+  margin: auto;
 }
 
 .scroll-down {
   transform: rotate(90deg);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.9rem;
   background: transparent;
   padding: 0.9rem;
@@ -92,4 +107,9 @@ nav a.active {
   color: var(--color-bg);
   background: var(--color-primary-variant);
 
+}
+
+.scroll-down:hover {
+  background: rgba(0,0,0,0.3);
+  color: var(--color-white);
 }
