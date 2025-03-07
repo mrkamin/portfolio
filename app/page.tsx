@@ -5,7 +5,7 @@ import Projects from "./components/Projects";
 export default async function Home() {
   
   return (
-   <div className="min-h-screen ">
+   <div className="">
       <Hero />
       <Navbar />
       <Projects />

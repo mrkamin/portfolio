@@ -16,12 +16,12 @@ export default async function Projects() {
         <div key={project._id} className='w-[90%] project-items border rounded-lg p-4 grid grid-cols-[3fr,1fr] bg-[rgba(77,181,255,0.4)] gap-4 items-center'>
             {project.image && (
                 <Image src={project.image}
-                alt={project.name} width={1000} height={50} className='rounded-lg object-cover w-full h-full' />
+                alt={project.name} width={1000} height={50} className='rounded-lg object-cover w-full h-full project-items-image' />
             )}
-            <div>
-                <h1>{project.name}</h1>
-                {project.description && <PortableText value={project.description} />}
-                {project.program && <PortableText value={project.program} />}
+            <div className='flex flex-col gap-3'>
+                <h1 className='text-xl text-[#1f1f38] font-bold'>{project.name}</h1>
+                <h6 className='text-lg text-justify text-[#1f1f38]'>{project.description && <PortableText value={project.description} />}</h6>
+                <h1 className='font-bold'>{project.program && <PortableText value={project.program} />}</h1>
                 <div className='flex gap-4 '>
                    <Link
                     className='button-cv text-center btn'

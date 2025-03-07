@@ -31,13 +31,14 @@ body {
 }
 
 .btn {
+  transition: var(--transition);
   color: var(--color-bg);
   width: 8rem;
   border: 1px solid var(--color-bg-variant);
   border-radius: 0.3rem;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 10px;
   font-weight: 600;
 }
 
@@ -61,6 +62,7 @@ nav {
 }
 
 nav a {
+  transition: var(--transition);
   display: flex;
   background: transparent;
   padding: 0.9rem;
@@ -79,6 +81,7 @@ nav a.active {
 }
 
 .hero-social a {
+  transition: var(--transition);
   display: flex;
   background: transparent;
   padding: 0.9rem;
@@ -103,6 +106,7 @@ nav a.active {
 
 .scroll-down {
   transform: rotate(90deg);
+  transition: var(--transition);
   font-weight: 400;
   font-size: 0.9rem;
   background: transparent;
@@ -119,5 +123,16 @@ nav a.active {
 }
 
 .project-items {
+  transition: var(--transition);
   border: 1px solid #4db5ff;
+}
+
+.project-items:hover {
+  background: transparent;
+}
+
+.project-items-image:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
