@@ -15,8 +15,10 @@ export async function getProjects(): Promise<Project[]> {
             name,
             "slug": slug.current,
             "image": image.asset->url,
-            url,
-            content
+            livedemo,
+            github,
+            description,
+            program
           }`
     )
 }

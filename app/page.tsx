@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 
 export default async function Home() {
   
@@ -7,6 +8,7 @@ export default async function Home() {
    <div className="min-h-screen ">
       <Hero />
       <Navbar />
+      <Projects />
    </div>
   );
 }

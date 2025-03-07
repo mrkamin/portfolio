@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portabletext/react": "^3.2.1",
     "@tailwindcss/postcss": "^4.0.9",
+    "components": "^0.1.0",
     "next": "15.1.7",
     "next-sanity": "^9.8.59",
     "react": "^19.0.0",

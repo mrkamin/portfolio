@@ -30,13 +30,24 @@ const project = {
             ]
         },
         {
-            name: 'url',
-            title: 'URL',
+            name: 'livedemo',
+            title: 'Live Demo',
             type: 'url',
         },
         {
-            name: "content",
-            title: "Content",
+            name: 'github',
+            title: 'Github',
+            type: 'url',
+        },
+        {
+            name: "description",
+            title: "Discription",
+            type: "array",
+            of: [{type: "block"}]
+        },
+        {
+            name: "program",
+            title: "Program",
             type: "array",
             of: [{type: "block"}]
         }
