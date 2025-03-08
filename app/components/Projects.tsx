@@ -13,7 +13,7 @@ export default async function Projects() {
       </div> 
       <div className='flex flex-col gap-2 items-center w-full'>
       {projects.map((project) => (
-        <div key={project._id} className='w-[90%] project-items border rounded-lg p-4 grid grid-cols-[3fr,1fr] bg-[rgba(77,181,255,0.4)] gap-4 items-center'>
+        <div key={project._id} className='w-[90%] project-items border rounded-lg p-4 grid md:grid-cols-1 lg:grid-cols-[3fr,1fr] bg-[rgba(77,181,255,0.4)] gap-4 items-center'>
             {project.image && (
                 <Image src={project.image}
                 alt={project.name} width={1000} height={50} className='rounded-lg object-cover w-full h-full project-items-image' />
