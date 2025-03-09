@@ -4,9 +4,6 @@
 @tailwind utilities;
 
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
   outline: 0;
   box-sizing: border-box;
   list-style: none;
@@ -31,8 +28,6 @@ body {
 }
 
 .btn {
-  transition: var(--transition);
-  color: var(--color-bg);
   width: 8rem;
   border: 1px solid var(--color-bg-variant);
   border-radius: 0.3rem;
@@ -122,17 +117,7 @@ nav a.active {
   color: var(--color-white);
 }
 
-.project-items {
-  transition: var(--transition);
+.project-items:hover {
   border: 1px solid #4db5ff;
 }
 
-.project-items:hover {
-  background: transparent;
-}
-
-.project-items-image:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: transform 0.5s ease;
-}

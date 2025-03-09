@@ -4,7 +4,7 @@ import { FiGithub, FiLinkedin } from "react-icons/fi"
 
 const HeroSocial = () => {
   return (
-    <div className="flex flex-col gap-5 hero-social absolute bottom-20 left-20 bg-[rgba(77,181,255,0.4)] border-none rounded-[3rem]">
+    <div className="flex md:flex-col gap-5 hero-social absolute bottom-[85%] left-5 md:bottom-40 md:left-10 lg:bottom-20 lg:left-20 bg-[rgba(77,181,255,0.4)] border-none rounded-[3rem]">
        <Link
       href="https://github.com/mrkamin"
       target="_blank"
