@@ -27,25 +27,6 @@ body {
   font-family: var(--ff);
 }
 
-.btn {
-  width: 8rem;
-  border: 1px solid var(--color-bg-variant);
-  border-radius: 0.3rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
-  font-weight: 600;
-}
-
-.button-talk:hover {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-bg-variant);
-}
-
-.button-cv:hover {
-  background: var(--color-bg-variant);
-}
-
 nav {
   width: max-content;
   z-index: 2;
@@ -112,12 +93,4 @@ nav a.active {
 
 }
 
-.scroll-down:hover {
-  background: rgba(0,0,0,0.3);
-  color: var(--color-white);
-}
-
-.project-items:hover {
-  border: 1px solid #4db5ff;
-}
 
