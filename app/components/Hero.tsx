@@ -18,7 +18,7 @@ const Hero = () => {
             <p className=' text-xl text-[#1f1f38] text-justify bg-gradient-to-b from-[#4db5ff] w-full border-none rounded-[1rem] p-8 max-w-xl'>I can help you build a product, feature, or website look through some of my work and experience if you have a project that needs coding, do not hesitate to contact me.</p>
         </div>
         <div className="">
-        <Link href="#contact" className="border hover:border-[#4db5ff] rounded-[3rem] rotate-90 p-2 bg-gradient-to-r from-[#4db5ff] transition-all duration-500 ease-in-out text-xl text-[#1f1f38] absolute bottom-20 right-5 md:bottom-60 right-5 lg:bottom-20 lg:right-20" >Scroll Down</Link>
+        <Link href="#contact" className="rounded-[3rem] rotate-90 p-2 bg-gradient-to-r from-[#4db5ff] hover:scale-105 courser-pointer  transition-all duration-500 ease-in-out text-xl text-[#1f1f38] absolute bottom-20 right-5 md:bottom-60 right-5 lg:bottom-20 lg:right-20" >Scroll Down</Link>
         </div>
         <HeroSocial />
     </div>
