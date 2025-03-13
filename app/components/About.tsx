@@ -18,7 +18,7 @@ const About = () => {
   return (
     <div className="flex flex-col gap-5 items-center py-10">
         <p className="text-xl text-[#1f1f38]">Get to Know</p>
-        <h1 className="text-xl md:text-3xl lg:text5xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">About Me</h1>
+        <h1 className="text-2xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">About Me</h1>
     <div className="grid grid-cols-1 md:grid-cols-[40%,60%] gap-5 w-[90%] items-start">
         <div className="bg-[linear-gradient(45deg,transparent,#4db5ff,transparent)] rounded-[2rem] overflow-hidden">
             <Image src={ProFileIMG} alt="ProfileIMG" className="rotate-[10deg] rounded-[2rem] hover:rotate-[0deg] transition-all duration-500 ease-in-out"/>

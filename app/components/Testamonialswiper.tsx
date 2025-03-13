@@ -17,7 +17,7 @@ const Testamonialswiper: React.FC<TestamonialsSwiperProps> = ({projects}) => {
     <div>
       <div className="flex flex-col gap-5 items-center py-10">
         <p className="text-xl text-[#1f1f38]">Review from clients</p>
-        <h1 className="text-xl md:text-3xl lg:text5xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">Recomendations</h1>
+        <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">Recomendations</h1>
         <Swiper
       className="w-[90%] md:w-[60%] lg:w-[40%]"
       modules={[Pagination]}

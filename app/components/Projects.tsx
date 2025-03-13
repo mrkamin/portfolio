@@ -31,16 +31,16 @@ const Projects = () => {
     <div className='mx-auto flex flex-col gap-5 items-center py-10'>
       <div className='flex flex-col items-center gap-2'>
         <p className='text-xl text-[#1f1f38]'>My Recent Work</p>
-        <h1 className='text-7xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent'>Portfolio</h1>
+        <h1 className='text-2xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent'>Portfolio</h1>
       </div> 
       <div className='flex flex-col gap-2 items-center w-full'>
-        {projects.slice(0,4).map((project) => (
-          <ProjectItems key={project._id} project={project} />
+        {projects.slice(0,4).map((project, index) => (
+          <ProjectItems key={project._id || `project-${index}`} project={project} />
         ))} 
         {visibleProjects > 4 && (
           <div className='flex flex-col gap-2 items-center w-full'>
-            {projects.slice(4, visibleProjects).map((project) => (
-              <ProjectItems key={project._id} project={project} />
+            {projects.slice(4, visibleProjects).map((project, index) => (
+              <ProjectItems key={project._id || `project-extra-${index}`} project={project} />
             ))}
           </div>
         )}

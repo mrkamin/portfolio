@@ -6,7 +6,7 @@ const Experience = () => {
     <div className='flex flex-col gap-5 items-center py-10'>
       <div className='flex flex-col items-center gap-2'>
         <p className='text-xl text-[#1f1f38]'>What I Know</p>
-        <h1 className='text-xl md:text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent'>My Experience</h1>
+        <h1 className='text-2xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent'>My Experience</h1>
       </div>
       <div className='w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
         <div className='flex flex-col gap-10 py-10 items-center bg-[rgba(77,181,255,0.4)] rounded-3xl'>

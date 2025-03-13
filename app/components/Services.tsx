@@ -4,7 +4,7 @@ const Services = () => {
   return (
     <div className="flex flex-col gap-5 items-center py-10">
         <p className="text-xl text-[#1f1f38]">What I Offer</p>
-        <h1 className="text-xl md:text-3xl lg:text5xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">Services</h1>
+        <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">Services</h1>
     
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[90%] gap-2">
             <div className="flex flex-col gap-5 items-center w-full rounded-b-[2rem] border border-[#4db5ff] bg-[rgba(77,181,255,0.4)] ">
