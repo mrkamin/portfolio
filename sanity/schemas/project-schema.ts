@@ -1,5 +1,5 @@
 
-const project = {
+export const project = {
     name: 'project',
     title: 'Projects',
     type: 'document',
@@ -54,4 +54,42 @@ const project = {
     ]
 };
 
-export default project;
+
+export const secondproject = {
+    name: 'secondproject',
+    title: 'SecondProjects',
+    type: 'document',
+    fields: [
+        {
+            name: 'pname',
+            title: 'Name',
+            type: 'string'
+        },
+        {
+            name: 'pslug',
+            title: 'Slug',
+            type: 'slug',
+            options: { source: 'name' }
+        },
+        {
+            name: 'pimage',
+            title: 'Image',
+            type: 'image',
+            options: { hotspot: true},
+            fields:[
+                { 
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string',
+                
+                }
+            ]
+        },
+        {
+            name: "pdescription",
+            title: "Discription",
+            type: "array",
+            of: [{type: "block"}]
+        },
+    ]
+};

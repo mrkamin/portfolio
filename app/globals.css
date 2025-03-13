@@ -93,4 +93,9 @@ nav a.active {
 
 }
 
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background: purple;
+}
+
+
 

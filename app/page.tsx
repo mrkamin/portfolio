@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
+import Testamonials from "./components/Testamonials";
 
 export default async function Home() {
   
@@ -15,6 +16,7 @@ export default async function Home() {
       <Experience />
       <About />
       <Services />
+      <Testamonials />
    </div>
   );
 }
