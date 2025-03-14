@@ -10,7 +10,7 @@ const Navbar = () => {
     const [activeNav, setActiveNav] = useState('/')
   return (
     <div>
-      <nav className="flex gap-5 bg-[rgba(0,0,0,0.3)] p-2 border-none rounded-[3rem]">
+      <nav className="navbar flex gap-5 bg-[rgba(0,0,0,0.3)] p-2 border-none rounded-[3rem]">
             <Link href="/" className={activeNav === '/' ? 'active' : ''}>
                 <AiOutlineHome />
             </Link>

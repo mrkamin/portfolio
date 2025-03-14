@@ -39,7 +39,7 @@ const About = () => {
     <div className="flex flex-col gap-5 items-center py-10" id="about">
         <p className="text-xl text-[#1f1f38]">Get to Know</p>
         <h1 className="text-2xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">About Me</h1>
-    <div className="grid grid-cols-1 md:grid-cols-[40%,60%] gap-5 w-[90%] items-start">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-[90%] items-start">
         <div className="bg-[linear-gradient(45deg,transparent,#4db5ff,transparent)] rounded-[2rem] overflow-hidden">
             {projects.length > 0 ? (
                 <Image 
@@ -76,7 +76,7 @@ const About = () => {
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
-                    <p style={{whiteSpace: 'pre-line'}}>
+                    <div style={{whiteSpace: 'pre-line'}}>
                         {projects.length > 0 && (
                             <>
                             <PortableText 
@@ -93,7 +93,7 @@ const About = () => {
                         )}
                         </>
                         )}
-                </p>
+                </div>
 
                 )}
                

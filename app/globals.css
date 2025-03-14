@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
   outline: 0;
@@ -27,7 +25,7 @@ body {
   font-family: var(--ff);
 }
 
-nav {
+.navbar {
   width: max-content;
   z-index: 2;
   position: fixed;
@@ -37,7 +35,7 @@ nav {
   backdrop-filter: blur(15px);
 }
 
-nav a {
+.navbar a {
   transition: var(--transition);
   display: flex;
   background: transparent;
@@ -47,12 +45,12 @@ nav a {
   font-size: 1.1rem;
 }
 
-nav a:hover {
+.navbar a:hover {
   background: rgba(0,0,0,0.3);
   color: var(--color-white);
 }
 
-nav a.active {
+.navbar a.active {
   background: var(--color-bg-variant);
 }
 
