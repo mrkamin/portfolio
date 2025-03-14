@@ -1,27 +1,58 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react"
-import ProFileIMG from './assets/myprotfoliopicabout.png'
+import { useEffect, useState } from "react"
 import { FaAward } from "react-icons/fa"
 import { FiUser } from "react-icons/fi"
 import { VscFolderLibrary } from "react-icons/vsc"
-import { content } from "./Content"
+import { Project } from "@/types/Project"
+import { ppGetProjects } from "@/sanity/sanity-utils"
+import { PortableText } from "@portabletext/react";
+
 
 
 const About = () => {
     const [isFullContentVisible, setIsFullContentVisible] = useState(false);
+    const [projects, setProjects] = useState<Project[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            try {
+                const data: Project[] = await ppGetProjects();
+                console.log("Fetched projects:", data); 
+                setProjects(data)
+            } catch (error) {
+                console.error("Error fetching projects:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchProjects()
+    }, []);
+
     const toggleContentVisibility = () => {
         setIsFullContentVisible(!isFullContentVisible)
     }
 
-    const truncatedContent = isFullContentVisible ? content : content.slice(0, 530);
-  return (
-    <div className="flex flex-col gap-5 items-center py-10">
+    
+    return (
+    <div className="flex flex-col gap-5 items-center py-10" id="about">
         <p className="text-xl text-[#1f1f38]">Get to Know</p>
         <h1 className="text-2xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">About Me</h1>
     <div className="grid grid-cols-1 md:grid-cols-[40%,60%] gap-5 w-[90%] items-start">
         <div className="bg-[linear-gradient(45deg,transparent,#4db5ff,transparent)] rounded-[2rem] overflow-hidden">
-            <Image src={ProFileIMG} alt="ProfileIMG" className="rotate-[10deg] rounded-[2rem] hover:rotate-[0deg] transition-all duration-500 ease-in-out"/>
+            {projects.length > 0 ? (
+                <Image 
+                    src={projects[0].ppimage} 
+                    alt="ProfileIMG" 
+                    className="rotate-[10deg] rounded-[2rem] hover:rotate-[0deg] transition-all duration-500 ease-in-out"
+                    width={1000}
+                    height={1000}
+                    objectFit="cover"
+                />
+            ) : (
+                <p>Loading image...</p>
+            )}
         </div>
         <div className="flex flex-col gap-5 w-[96%]">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -42,19 +73,30 @@ const About = () => {
                 </div>
             </div>
             <div>
-                <p style={{whiteSpace: 'pre-line'}}>
-                    {truncatedContent}
-                    {content.length > 220 && !isFullContentVisible && (
-                        <button type="button" className="bg-gradient-to-r from-[#4db5ff] p-2 rounded-[0.5rem]" onClick={toggleContentVisibility}>
-                            Read More...
+                {loading ? (
+                    <p>Loading...</p>
+                ) : (
+                    <p style={{whiteSpace: 'pre-line'}}>
+                        {projects.length > 0 && (
+                            <>
+                            <PortableText 
+                                value={isFullContentVisible ? projects[0].ppdescription : projects[0].ppdescription.slice(0, 3)} 
+                            />
+                        {projects[0].ppdescription.length > 3 && (
+                            <button 
+                            type="button" 
+                            className="bg-gradient-to-r from-[#4db5ff] p-2 rounded-[0.5rem]" 
+                            onClick={toggleContentVisibility}
+                        >
+                            {isFullContentVisible ? "Read Less" : "Read More..."}
                         </button>
-                    )}
-                    {content.length > 220 && isFullContentVisible && (
-                        <button type="button" className="bg-gradient-to-r from-[#4db5ff] p-2 rounded-[0.5rem]" onClick={toggleContentVisibility}>
-                            Read Less
-                        </button>
-                    )}
+                        )}
+                        </>
+                        )}
                 </p>
+
+                )}
+               
             </div>
         </div>
     </div>

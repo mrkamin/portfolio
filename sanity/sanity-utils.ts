@@ -44,3 +44,20 @@ export async function pGetProjects(): Promise<Project[]> {
           }`
     )
 }
+export async function ppGetProjects(): Promise<Project[]> {
+    const client = createClient({
+        projectId: "scav6p92",
+        dataset: "production",
+        apiVersion: "2024-02-01",
+    });
+
+    return client.fetch(
+        groq`*[_type == "thirdproject"]{
+            _ppid,
+            _ppcreatedAt,
+            "ppslug": ppslug.current,
+            "ppimage": ppimage.asset->url,
+            ppdescription,
+          }`
+    )
+}

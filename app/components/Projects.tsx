@@ -28,7 +28,7 @@ const Projects = () => {
     const showLess = () => setVisibleProjects(4);
 
   return (
-    <div className='mx-auto flex flex-col gap-5 items-center py-10'>
+    <div className='mx-auto flex flex-col gap-5 items-center py-10' id='portfolio'>
       <div className='flex flex-col items-center gap-2'>
         <p className='text-xl text-[#1f1f38]'>My Recent Work</p>
         <h1 className='text-2xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent'>Portfolio</h1>

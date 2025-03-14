@@ -5,7 +5,7 @@ import { SiMinutemailer } from "react-icons/si"
 
 const Contact = () => {
   return (
-    <div className="flex flex-col gap-5 py-10 items-center">
+    <div className="flex flex-col gap-5 py-10 items-center" id="contact">
       <div className='flex flex-col items-center gap-2'>
         <p className='text-xl text-[#1f1f38]'>Get In Touch</p>
         <h1 className='text-2xl md:text-4xl lg:text-6xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent'>Contact Me</h1>

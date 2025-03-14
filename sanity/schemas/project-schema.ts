@@ -93,3 +93,38 @@ export const secondproject = {
         },
     ]
 };
+
+export const thirdproject = {
+    name: 'thirdproject',
+    title: 'ThirdProjects',
+    type: 'document',
+    fields: [
+        {
+            name: 'ppslug',
+            title: 'Slug',
+            type: 'slug',
+            options: { source: 'name' }
+        },
+        {
+            name: 'ppimage',
+            title: 'Image',
+            type: 'image',
+            options: { hotspot: true},
+            fields:[
+                { 
+                    name: 'alt',
+                    title: 'Alt',
+                    type: 'string',
+                
+                }
+            ]
+        },
+        {
+            name: "ppdescription",
+            title: "Discription",
+            type: "array",
+            of: [{type: "block"}]
+        },
+    ]
+};
+

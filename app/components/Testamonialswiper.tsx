@@ -14,7 +14,7 @@ interface TestamonialsSwiperProps {
 
 const Testamonialswiper: React.FC<TestamonialsSwiperProps> = ({projects}) => {
   return (
-    <div>
+    <div id="testamonials">
       <div className="flex flex-col gap-5 items-center py-10">
         <p className="text-xl text-[#1f1f38]">Review from clients</p>
         <h1 className="text-xl md:text-3xl lg:text-5xl font-extrabold bg-gradient-to-r from-[#4db5ff] via-purple-500 to-[#4db5ff] bg-clip-text text-transparent">Recomendations</h1>
